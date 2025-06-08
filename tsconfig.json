@@ -1,6 +1,23 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "baseUrl": "./",
+    "types": ["jest", "node"],
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@screens/*": ["src/screens/*"],
+      "@models/*": ["src/models/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@services/*": ["src/services/*"],
+      "@context/*": ["src/context/*"],
+      "@utils/*": ["src/utils/*"],
+      "@themes/*": ["src/theme/*"],
+      "@assets/*": ["src/assets/*"],
+      
+    }
+  },
+  "include": ["src/**/*", "tests/**/*", "vitest.setup.ts","jest/setup.ts", "src"],
+  "exclude": ["node_modules"]
+  
 }
